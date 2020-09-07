@@ -7,7 +7,7 @@ def sanatize(subject, content):
     if content:
         content = unidecode.unidecode(
             content.strip().replace('\n', '').replace('\r', '').replace('statt ', '').replace('.–', '').replace(
-                '"', ''))
+                '"', '').replace('”', ''))
     else:
         content = 'unknown-' + subject
     return content
